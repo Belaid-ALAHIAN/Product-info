@@ -1,6 +1,6 @@
 const Product = require('../models/product');
 
-//detch products
+//get products
 exports.getProduct = (req,res,next)=>{
     Product.find().then(prod =>{
         res.send(prod);
