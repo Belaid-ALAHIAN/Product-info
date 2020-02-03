@@ -5,6 +5,7 @@ const router = express.Router();
 
 router.get('/product',productController.getProduct);
 
+router.get('/addProduct',productController.getAddProduct);
 router.post('/addProduct',productController.postAddProduct);
 
 router.post('/delete-product',productController.postDeleteProduct);

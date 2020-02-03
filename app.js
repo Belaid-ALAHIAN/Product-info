@@ -1,5 +1,5 @@
 const express = require('express');
-
+const path = require('path');
 const mongoose = require('mongoose');
 const bodyparser = require('body-parser');
 
@@ -8,6 +8,10 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 const productRouter = require('./routes/product');
+
+//use static file
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 

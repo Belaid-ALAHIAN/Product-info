@@ -13,6 +13,15 @@ exports.getProduct = (req,res,next)=>{
     console.log('hello /product');
 };
 
+//get addProduct
+exports.getAddProduct = (req,res,next)=>{
+    res.render('addProduct',{
+        pageTitle :'addProduct'
+        
+    });
+
+};
+
 //add product
 exports.postAddProduct = (req,res,next)=>{
     const productName = req.body.name;
