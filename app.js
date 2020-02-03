@@ -8,6 +8,7 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 const productRouter = require('./routes/product');
+const errorController = require('./controler/error');
 
 //use static file
 app.use(express.static(path.join(__dirname, 'public')));
@@ -18,7 +19,7 @@ app.use(bodyparser.json());
 
 app.use(productRouter);
 
-
+app.use(errorController.getErr);
 
 const options = {
     useNewUrlParser: true,
