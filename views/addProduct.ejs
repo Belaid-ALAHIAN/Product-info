@@ -9,17 +9,17 @@
         <main class="main-p">
         <form action="/addProduct" method="POST">
             <div class="form-group">
-            <label for="exampleFormControlInput1">Name</label>
-            <input type="email" class="form-control" id="name" placeholder="name">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="name" name="name">
             </div>
             <div class="form-group">
-            <label for="exampleFormControlSelect1">Price</label>
-            <input type="number" class="form-control" id="price" placeholder="0.00" step="0.01">
+            <label for="price">Price</label>
+            <input type="number" class="form-control" id="price" placeholder="0.00" step="0.01" name="price">
             </div>
             
             <div class="form-group">
-            <label for="exampleFormControlTextarea1">Description</label>
-            <textarea class="form-control" id="description" rows="3"></textarea>
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" rows="3" name="description"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Add</button>
         </form>
