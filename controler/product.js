@@ -6,7 +6,9 @@ const Product = require('../models/product');
 
 exports.getProduct = (req,res,next)=>{
     Product.find().then(prod =>{
-        res.send(prod);
+        res.render('index',{
+            pageTitle:'products',
+        });
     }).catch(err =>{
         console.log(err);
     })
