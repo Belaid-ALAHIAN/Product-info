@@ -8,6 +8,7 @@ exports.getProduct = (req,res,next)=>{
     Product.find().then(prod =>{
         res.render('index',{
             pageTitle:'products',
+            product:prod
         });
     }).catch(err =>{
         console.log(err);
