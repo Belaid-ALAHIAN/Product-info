@@ -4,17 +4,19 @@
 <body>
 
     <%- include('./includes/nav.ejs') %>
-<div class="container">
-    <article class="product-detail">
-        <div class="image">
-            <img src="" alt="product">
+<div class="container" style="margin-top: 3%;">
+    <article class="row">
+        <div class="col-4">
+            <img src="https://static.fnac-static.com/multimedia/Images/81/81/41/AF/11485569-1505-1540-1/tsp20190408170337/Apple-iPhone-5S-16-Go-Argent-Reconditionne-ou-Occasion.jpg" alt="product">
         </div>
-        <div class="title">
-            <h1><%=prod.name%></h1>
-        </div>
-        <div class="info">
-            <h2><%=prod.price%></h2>
-            <p><%=prod.description%></p>
+        <div class="col-6">
+            <div class="title">
+                <h1>Title :<%=prod.name%></h1>
+            </div>
+            <div class="info">
+                <h2>Price :<%=prod.price%></h2>
+                <p>description :<%=prod.description%></p>
+            </div>
         </div>
     </article>
     
