@@ -12,6 +12,6 @@ router.post('/delete-product',productController.postDeleteProduct);
 
 router.post('/update-product',productController.postUpdatePoduct);
 
-router.post('/find',productController.postFindByName);
+router.post('/product',productController.postFindByName);
 
 module.exports = router;

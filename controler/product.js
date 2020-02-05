@@ -73,10 +73,14 @@ exports.postFindByName = (req,res,next)=>{
     const name = req.body.name;
     console.log(name);
 
-    Product.find({$where: ()=>{
-        return this.name === name ;
-    }}).then(prod =>{
-        res.send(prod);
+    Product.find({ name: { $eq: name }}).then(prod =>{
+        console.log(prod)
+        
+        res.render('search',{
+            pageTitle:'product founded',
+            product:prod
+        });
+        
     }).catch(err =>{
         console.log(err);
     });

@@ -14,7 +14,7 @@ const errorController = require('./controler/error');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyparser.urlencoded({ extended: false }));
-//app.use(bodyparser.json());
+app.use(bodyparser.json());
 
 
 app.use(productRouter);
