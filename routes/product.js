@@ -14,4 +14,6 @@ router.post('/update-product',productController.postUpdatePoduct);
 
 router.post('/product',productController.postFindByName);
 
+router.get('/detail/:productId',productController.getDetail);
+
 module.exports = router;

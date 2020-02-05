@@ -86,4 +86,17 @@ exports.postFindByName = (req,res,next)=>{
     });
 };
 
+//get product detail
+ exports.getDetail = (req,res,next)=>{
+     const prodId = req.params.productId;
+     Product.findById(prodId).then(product =>{
+         res.render('detail',{
+             pageTitle:'detail',
+             prod:product
+         })
+     }).catch(err =>{
+         console.log(err);
+     });
+ }
+
 
